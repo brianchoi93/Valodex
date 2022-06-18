@@ -1,0 +1,14 @@
+#agentlist {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.agentimg {
+  max-width: 100px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+
+}
