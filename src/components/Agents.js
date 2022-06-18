@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-
+import "./Agents.css"
 
 function Agents(props) {
-  const [agents, setAgents] = useState('');
+
+  const [agents, setAgents] = useState([]);
+  
   useEffect(()=> {
     fetch('https://valorant-api.com/v1/agents')
-      .then ((res)=>{
-        return res.json();
-      })
+      .then ((res) => res.json())
       .then ((json)=>{
-        setAgents(json);
-        console.log(setAgents);
+        setAgents(json.data);
+        console.log(json);
       })
       .catch((err)=>{
         console.log("something went wrong")
@@ -18,9 +18,23 @@ function Agents(props) {
 }, []);
 
   return (
-    <div>
-      
-    </div>
+    <section className="container">
+      {
+        agents.map((agent) => {
+          if(agent.isPlayableCharacter === true){          
+            
+            return(
+            <ul id="agentlist">
+              <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
+              <li>{agent.displayName}</li>
+              <li>{agent.description}</li>
+            </ul>
+
+          )}
+
+        })
+      }
+    </section>
   );
 }
 
