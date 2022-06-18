@@ -21,13 +21,17 @@ function Agents(props) {
     <section className="container">
       {
         agents.map((agent) => {
-          return(
+          if(agent.isPlayableCharacter === true){          
+            
+            return(
             <ul id="agentlist">
-              <li className="agentimg"><img src={agent.fullPortraitV2} alt={agent.displayName} /></li>
+              <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
               <li>{agent.displayName}</li>
               <li>{agent.description}</li>
             </ul>
-          )
+
+          )}
+
         })
       }
     </section>
