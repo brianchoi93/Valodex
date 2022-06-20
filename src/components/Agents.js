@@ -24,11 +24,17 @@ function Agents(props) {
           if(agent.isPlayableCharacter === true){          
             
             return(
-            <ul id="agentlist">
+            <div>
+              <ul>
+                <h2>{agent.role.displayName}</h2>
+              </ul>
+              <ul id="agentlist">
               <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
               <li>{agent.displayName}</li>
               <li>{agent.description}</li>
             </ul>
+            </div>
+
 
           )}
 
