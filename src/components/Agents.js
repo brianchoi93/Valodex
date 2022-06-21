@@ -19,29 +19,34 @@ function Agents(props) {
 
   return (
     <section className="agent-container">
-      {
+
+      {/* {
         agents.map((agent) => {
+          // Class: Duelist
           if(agent.isPlayableCharacter === true && agent.role.displayName === "Duelist"){          
-            
             return(
-            <div>
-              <h2>Duelist</h2>
-              <ul id="agentlist">
-                <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
-                <li><h3>{agent.displayName}</h3></li>
-                <li className="agtdescription">{agent.description}</li>              
-              </ul>
-            </div>
+              <div>
+                <h2>{agent.role.displayName}</h2>
+                <ul className="agentlist">
+                  <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
+                  <li><h3>{agent.displayName}</h3></li>
+                  <li className="agtdescription">{agent.description}</li>
+                  <li>{agent.abilities.displayName}</li>
+                  <li>{agent.abilities.description}</li>              
+                </ul>
+              </div>
           )} 
         })
-      }
+      } */}
+
+      {/* Class: Initiator
       {
         agents.map((agent) => {
           if(agent.isPlayableCharacter === true && agent.role.displayName === "Initiator") {
             return(
               <div>
                 <h2>Initiator</h2>
-                <ul id="agentlist">
+                <ul className="agentlist">
                   <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
                   <li><h3>{agent.displayName}</h3></li>
                   <li className="agtdescription">{agent.description}</li>              
@@ -50,14 +55,16 @@ function Agents(props) {
             )
           }
         })
-      }
+      } */}
+
+      {/* Class: Sentinel
       {
         agents.map((agent) => {
           if(agent.isPlayableCharacter === true && agent.role.displayName === "Sentinel") {
             return (
               <div>
                 <h2>Sentinel</h2>
-                <ul id="agentlist">
+                <ul className="agentlist">
                   <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
                   <li><h3>{agent.displayName}</h3></li>
                   <li className="agtdescription">{agent.description}</li>              
@@ -66,14 +73,16 @@ function Agents(props) {
             )
           }
         })
-      }
+      } */}
+
+      {/* Class: Controller
       {
         agents.map((agent) => {
           if(agent.isPlayableCharacter === true && agent.role.displayName === "Controller") {
             return (
               <div>
                 <h2>Controller</h2>
-                <ul id="agentlist">
+                <ul className="agentlist">
                   <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
                   <li><h3>{agent.displayName}</h3></li>
                   <li className="agtdescription">{agent.description}</li>              
@@ -82,7 +91,7 @@ function Agents(props) {
             )
           }
         })
-      }
+      } */}
     </section>
   );
 }
