@@ -21,15 +21,14 @@ function Weapons(props) {
     <section className="container">
       {
         weapons.map((weapon) => {
+          
             return(
             <ul id="weaponlist">
               <li><img className="weaponimg" src={weapon.displayIcon} alt={weapon.displayName} /></li>
               <li>{weapon.displayName}</li>
               <li>{weapon.description}</li>
             </ul>
-
           )
-
         })
       }
     </section>

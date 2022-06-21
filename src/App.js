@@ -3,6 +3,7 @@ import Main from './components/Main';
 import Agents from './components/Agents';
 import Weapons from './components/Weapons';
 import Maps from './components/Maps';
+import AgentClass from './components/AgentClass';
 import { Routes, Route, Link } from 'react-router-dom';
 
 function App() {
@@ -21,8 +22,8 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={ <Main/> } />
-          <Route path="/agents" element={ <Agents/> } />
+          <Route path="/" element={ <Main /> } />
+          <Route path="/agents" element={ <Agents /> } />
           <Route path="/weapons" element={<Weapons />} />
           <Route path="/maps" element={<Maps />} />
         </Routes>
