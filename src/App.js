@@ -22,8 +22,8 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={ <Main/> } />
-          <Route path="/agents" element={ <AgentClass/> } />
+          <Route path="/" element={ <Main /> } />
+          <Route path="/agents" element={ <Agents /> } />
           <Route path="/weapons" element={<Weapons />} />
           <Route path="/maps" element={<Maps />} />
         </Routes>

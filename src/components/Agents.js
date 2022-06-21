@@ -19,25 +19,34 @@ function Agents(props) {
 
   return (
     <section className="agent-container">
-
-      {/* {
+      {
         agents.map((agent) => {
+          
           // Class: Duelist
           if(agent.isPlayableCharacter === true && agent.role.displayName === "Duelist"){          
             return(
               <div>
-                <h2>{agent.role.displayName}</h2>
                 <ul className="agentlist">
                   <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
                   <li><h3>{agent.displayName}</h3></li>
                   <li className="agtdescription">{agent.description}</li>
-                  <li>{agent.abilities.displayName}</li>
-                  <li>{agent.abilities.description}</li>              
+                  <li><img className="abi-icon" src={agent.abilities[0].displayIcon} alt="" /></li>
+                  <li>{agent.abilities[0].displayName}</li>
+                  <li>{agent.abilities[0].description}</li>
+                  <li><img className="abi-icon" src={agent.abilities[1].displayIcon} alt="" /></li>
+                  <li>{agent.abilities[1].displayName}</li>
+                  <li>{agent.abilities[1].description}</li>
+                  <li><img className="abi-icon" src={agent.abilities[2].displayIcon} alt="" /></li>
+                  <li>{agent.abilities[2].displayName}</li>
+                  <li>{agent.abilities[2].description}</li>
+                  <li><img className="abi-icon" src={agent.abilities[3].displayIcon} alt="" /></li>
+                  <li>{agent.abilities[3].displayName}</li>
+                  <li>{agent.abilities[3].description}</li>              
                 </ul>
               </div>
           )} 
         })
-      } */}
+      }
 
       {/* Class: Initiator
       {
