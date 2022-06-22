@@ -23,8 +23,8 @@ function AgentClass(props) {
       </div>
       
       <div>
-        <h2>Controller</h2>
-        <img className="class-img" src="ControllerClassSymbol.png" alt="" />
+        <Link to="/agentclass/controller"><h2>Controller</h2></Link>
+        <Link to="/agentclass/controller"><img className="class-img" src="ControllerClassSymbol.png" alt="" /></Link>
         <p>Controllers are experts in slicing up dangerous territory to set their team up for success. This class provides lots of utility in the form of slowing down the enemy players via Walls, Smokes that block Vision, and even Slows that can be placed on the ground.</p>
       </div>
     </>
