@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
-import "./Agents.css"
+import React, { useState, useEffect } from 'react';
 
-function Duelist(props) {
+function Controller(props) {
 
   const [agents, setAgents] = useState([]);
-  
+
   useEffect(()=> {
     fetch('https://valorant-api.com/v1/agents')
       .then ((res) => res.json())
@@ -21,9 +20,10 @@ function Duelist(props) {
     <section className="agent-container">
       {
         agents.map((agent) => {
-          if(agent.isPlayableCharacter === true && agent.role.displayName === "Duelist"){          
-            return(
+          if(agent.isPlayableCharacter === true && agent.role.displayName === "Controller") {
+            return (
               <div>
+                <h2>Controller</h2>
                 <ul className="agentlist">
                   <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
                   <li><h3>{agent.displayName}</h3></li>
@@ -38,14 +38,15 @@ function Duelist(props) {
                         </>
                       )
                     })
-                  }
+                  }              
                 </ul>
               </div>
-          )} 
+            )
+          }
         })
       }
     </section>
   );
 }
 
-export default Duelist;
+export default Controller;
