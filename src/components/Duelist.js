@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Agents.css"
 
-function Agents(props) {
+function Duelist(props) {
 
   const [agents, setAgents] = useState([]);
   
@@ -21,8 +21,6 @@ function Agents(props) {
     <section className="agent-container">
       {
         agents.map((agent) => {
-
-          // Class: Duelist
           if(agent.isPlayableCharacter === true && agent.role.displayName === "Duelist"){          
             return(
               <div>
@@ -46,24 +44,6 @@ function Agents(props) {
           )} 
         })
       }
-
-      {/* Class: Initiator
-      {
-        agents.map((agent) => {
-          if(agent.isPlayableCharacter === true && agent.role.displayName === "Initiator") {
-            return(
-              <div>
-                <h2>Initiator</h2>
-                <ul className="agentlist">
-                  <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
-                  <li><h3>{agent.displayName}</h3></li>
-                  <li className="agtdescription">{agent.description}</li>              
-              </ul>
-              </div>
-            )
-          }
-        })
-      } */}
 
       {/* Class: Sentinel
       {
@@ -104,4 +84,4 @@ function Agents(props) {
   );
 }
 
-export default Agents;
+export default Duelist;

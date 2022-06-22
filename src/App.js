@@ -1,6 +1,7 @@
 import './App.css';
 import Main from './components/Main';
-import Agents from './components/Agents';
+import Duelist from './components/Duelist';
+import Initiator from './components/Initiator';
 import Weapons from './components/Weapons';
 import Maps from './components/Maps';
 import AgentClass from './components/AgentClass';
@@ -15,7 +16,7 @@ function App() {
         </h1>
         <ul id="navbar">
           <Link to="/"><li className="navlist">Home</li></Link>
-          <Link to="/agents"><li className="navlist">Agents</li></Link>
+          <Link to="/agentclass"><li className="navlist">Agent Class</li></Link>
           <Link to="/weapons"><li className="navlist">Weapons</li></Link>
           <Link to="/maps"><li className="navlist">Maps</li></Link>
         </ul>
@@ -23,7 +24,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={ <Main /> } />
-          <Route path="/agents" element={ <Agents /> } />
+          <Route path="/agentclass" element={ <AgentClass/> } />
+          <Route path="/agentclass/duelist" element={ <Duelist /> } />
+          <Route path="/agentclass/initiator" element={ <Initiator />} />
           <Route path="/weapons" element={<Weapons />} />
           <Route path="/maps" element={<Maps />} />
         </Routes>

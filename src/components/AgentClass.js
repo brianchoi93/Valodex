@@ -1,19 +1,18 @@
 import "./AgentClass.css"
 import { Routes, Route, Link } from 'react-router-dom';
-import Agents from "./Agents";
 
 function AgentClass(props) {
   return (
     <>
       <div>
-        <h2>Duelist</h2>
-        <img className="class-img" src="DuelistClassSymbol.png"/>
+        <Link to="/agentclass/duelist"><h2>Duelist</h2></Link>
+        <Link to="/agentclass/duelist"><img className="class-img" src="DuelistClassSymbol.png"/></Link>
         <p>Duelists are self-sufficient fraggers who their team expects, through abilities and skills, to get high frags and seek out engagements first. This class type is the most offensive choice and often ranks highly as an Attacker. These agents will generally be at the forefront when clearing corners and attacking sites.</p>
       </div>
 
       <div>
-        <h2>Initiator</h2>
-        <img className="class-img" src="InitiatorClassSymbol.png" alt="" />
+        <Link to="/agentclass/initiator"><h2>Initiator</h2></Link>
+        <Link to="/agentclass/initiator"><img className="class-img" src="InitiatorClassSymbol.png" alt="" /></Link>
         <p>Initiators challenge angles by setting up their team to enter contested ground and push defenders away. You can expect to see lots of stuns and information gathering abilities with this class.</p>
       </div>
 
