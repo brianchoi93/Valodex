@@ -1,5 +1,5 @@
 import "./AgentClass.css"
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function AgentClass(props) {
   return (
@@ -17,8 +17,8 @@ function AgentClass(props) {
       </div>
 
       <div>
-        <h2>Sentinel</h2>
-        <img className="class-img" src="SentinelClassSymbol.png" alt="" />
+        <Link to="/agentclass/sentinel"><h2>Sentinel</h2></Link>
+        <Link to="/agentclass/sentinel"><img className="class-img" src="SentinelClassSymbol.png" alt="" /></Link>
         <p>Sentinels are defensive experts who can lock down areas and watch flanks, both on attacker and defender rounds. This class type tends to be the best defensive agents; these characters will either hang back or lay traps to watch your teams flank when attacking.</p>
       </div>
       

@@ -2,6 +2,7 @@ import './App.css';
 import Main from './components/Main';
 import Duelist from './components/Duelist';
 import Initiator from './components/Initiator';
+import Sentinel from './components/Sentinel';
 import Weapons from './components/Weapons';
 import Maps from './components/Maps';
 import AgentClass from './components/AgentClass';
@@ -26,9 +27,10 @@ function App() {
           <Route path="/" element={ <Main /> } />
           <Route path="/agentclass" element={ <AgentClass/> } />
           <Route path="/agentclass/duelist" element={ <Duelist /> } />
-          <Route path="/agentclass/initiator" element={ <Initiator />} />
-          <Route path="/weapons" element={<Weapons />} />
-          <Route path="/maps" element={<Maps />} />
+          <Route path="/agentclass/initiator" element={ <Initiator /> } />
+          <Route path="/agentclass/sentinel" element={ <Sentinel /> } /> 
+          <Route path="/weapons" element={ <Weapons /> } />
+          <Route path="/maps" element={ <Maps /> } />
         </Routes>
       </main>
     </div>
