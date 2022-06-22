@@ -1,12 +1,12 @@
 import './App.css';
 import Main from './components/Main';
+import AgentClass from './components/AgentClass';
 import Duelist from './components/Duelist';
 import Initiator from './components/Initiator';
 import Sentinel from './components/Sentinel';
 import Controller from './components/Controller';
 import Weapons from './components/Weapons';
 import Maps from './components/Maps';
-import AgentClass from './components/AgentClass';
 import { Routes, Route, Link } from 'react-router-dom';
 
 function App() {
