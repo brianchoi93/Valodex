@@ -25,16 +25,16 @@ function Duelist(props) {
             return(
               <div>
                 <ul className="agentlist">
-                  <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
-                  <li><h3>{agent.displayName}</h3></li>
+                  <li className="agtimg"><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
+                  <li className="agentname"><h3>{agent.displayName}</h3></li>
                   <li className="agtdescription">{agent.description}</li>
                   {
                     agent.abilities.map((ability) => {
                       return(
                         <>
-                          <li><img className="abi-icon" src={ability.displayIcon} alt="" /></li>
-                          <li>{ability.displayName}</li>
-                          <li>{ability.description}</li>
+                          <li className="abi-img"><img className="abi-icon" src={ability.displayIcon} alt="" /></li>
+                          <li className="abi-name">{ability.displayName}</li>
+                          <li className="abi-desc">{ability.description}</li>
                         </>
                       )
                     })

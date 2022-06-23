@@ -1,4 +1,29 @@
 .class-img {
-  max-width: 25vh;
-  max-height: 25vh;
+  max-width: 20vh;
+  max-height: 20vh;
+  padding: 20px;
+}
+
+.class-container {
+  display:grid;
+  grid-template-rows: 400px 400px 400px 400px;
+  grid-template-columns: 1fr;
+  row-gap: 2em;
+}
+
+.class-desc {
+  margin: 0 2em 0 2em;
+}
+
+/* #duel-class {
+
+}
+
+#init-class {}
+#sent-class {}
+#cont-class {} */
+
+
+.class-title {
+  /* padding: 20px; */
 }

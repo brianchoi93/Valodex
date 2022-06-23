@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import "./Agents.css"
+
 
 function Sentinel(props) {
   const [agents, setAgents] = useState([]);

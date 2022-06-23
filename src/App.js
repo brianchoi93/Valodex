@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <header>
         <h1>
-          <Link to="/"><img src="https://fontmeme.com/permalink/220618/a59e6ab8cb7ca18556242da1997b8374.png" alt="Valodex" /></Link>
+          <Link to="/"><img className="title" src="valodex-header.png" alt="Valodex" /></Link>
         </h1>
         <ul id="navbar">
           <Link to="/"><li className="navlist">Home</li></Link>
