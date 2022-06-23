@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import "./Agents.css"
 
 function Controller(props) {
@@ -10,7 +10,6 @@ function Controller(props) {
       .then ((res) => res.json())
       .then ((json)=>{
         setAgents(json.data);
-        // console.log(json);
       })
       .catch((err)=>{
         console.log("something went wrong")
@@ -24,24 +23,28 @@ function Controller(props) {
           if(agent.isPlayableCharacter === true && agent.role.displayName === "Controller") {
             return (
               <div>
-                <h2>Controller</h2>
-                <ul className="agentlist">
-                  <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
-                  <li><h3>{agent.displayName}</h3></li>
-                  <li className="agtdescription">{agent.description}</li>
-                  {
-                    agent.abilities.map((ability) => {
-                      return(
-                        <>
-                          <li><img className="abi-icon" src={ability.displayIcon} alt="" /></li>
-                          <li>{ability.displayName}</li>
-                          <li>{ability.description}</li>
-                        </>
-                      )
-                    })
-                  }              
-                </ul>
-              </div>
+              <ul key={agent.uuid} className="agentlist">
+                <li className="agtimg"><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
+                <li className="agentname"><h3>{agent.displayName}</h3></li>
+                <li className="agtdescription">{agent.description}</li>
+                {
+                  agent.abilities.map((ability, id) => {
+                    if(ability.displayIcon === null) {
+                      return;
+                    } else if (ability.slot === "Passive") {
+                      return;
+                    } else {
+                    return(
+                      <ul key={id}>
+                        <li className="abi-img"><img className="abi-icon" src={ability.displayIcon} alt="" /></li>
+                        <li className="abi-name">{ability.displayName}</li>
+                        <li className="abi-desc">{ability.description}</li>
+                      </ul>
+                    )}
+                  })
+                }
+              </ul>
+            </div>
             )
           }
         })

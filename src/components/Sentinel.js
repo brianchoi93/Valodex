@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import "./Agents.css"
 
-
 function Sentinel(props) {
+
   const [agents, setAgents] = useState([]);
 
-  useEffect (()=>{
+  useEffect(()=>{
     fetch('https://valorant-api.com/v1/agents')
       .then ((res) => res.json())
       .then ((json)=>{
@@ -23,20 +23,25 @@ function Sentinel(props) {
           if(agent.isPlayableCharacter === true && agent.role.displayName === "Sentinel")
           {
             return(
-              <div>
+              <div key={agent.uuid}>
                 <ul className="agentlist">
-                  <li><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
-                  <li><h3>{agent.displayName}</h3></li>
+                  <li className="agtimg"><img className="agentimg" src={agent.fullPortraitV2} alt=  {agent.displayName} /></li>
+                  <li className="agentname"><h3>{agent.displayName}</h3></li>
                   <li className="agtdescription">{agent.description}</li>
                   {
-                    agent.abilities.map((ability) => {
+                    agent.abilities.map((ability, id) => {
+                      if(ability.displayIcon === null) {
+                      return;
+                      } else if (ability.slot === "Passive") {
+                      return;
+                      } else {
                       return(
-                        <>
-                          <li><img className="abi-icon" src={ability.displayIcon} alt="" /></li>
-                          <li>{ability.displayName}</li>
-                          <li>{ability.description}</li>
-                        </>
-                      )
+                        <ul className="abi-container" key={id}>
+                          <li className="abi-img"><img className="abi-icon" src={ability.displayIcon} alt="" /></li>
+                          <li className="abi-name">{ability.displayName}</li>
+                          <li className="abi-desc">{ability.description}</li>
+                        </ul>
+                      )}
                     })
                   }
                 </ul>
