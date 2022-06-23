@@ -24,3 +24,19 @@
   margin-right: 20px;
   margin-top: auto;
 }
+
+@media screen and (min-width: 480px) {
+  #header-msg {
+    margin-top: 10%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    min-height: 56vh;
+  }
+
+  .message {
+    
+  }
+}

@@ -2,7 +2,7 @@ import './Main.css'
 
 function Main(props) {
   return (
-    <div>
+    <div className="main-container">
       <h2 id="header-msg">Welcome to Valodex!</h2>
       <p id="welcome-msg">
         This application will assist you in furthering your knowlegde about the popular first person shooter game called Valorant.
