@@ -1,13 +1,28 @@
 #maplist {
   list-style-type: none;
-  text-align: center;
   padding: 0;
-  margin: 0;
 }
 
 .mapimg {
-  max-width: 30vh;
-  max-height: 30vh;
-  padding: 30px 0 30px 0;
+  max-width: 50vh;
+  max-height: 50vh;
+  padding: 10px 0 20px 0;
 }
 
+.map-name {
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 670px) {
+  .map-container {
+  display: grid;
+  grid-template-rows: 350px 350px 350px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.map-name{
+  font-size: 20px;
+  padding-bottom: 50px;
+}
+
+}

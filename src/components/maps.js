@@ -18,13 +18,13 @@ function Maps(props) {
   }, []);
 
   return (
-    <section className="container">
+    <section className="map-container">
       {
         maps.map((map) => {
           return (
-            <ul id="maplist">
+            <ul id="maplist" key={map.uuid}>
               <li><img className="mapimg" src={map.splash} alt={map.displayName} /></li>
-              <li>{map.displayName}</li>
+              <li className="map-name">{map.displayName}</li>
             </ul>
           )
         })
