@@ -1,0 +1,31 @@
+#maplist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mapimg {
+  max-width: 50vh;
+  max-height: 50vh;
+  padding: 10px 0 20px 0;
+}
+
+.map-list{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.map-list li {
+  padding: 10px;
+  margin: 5px;
+}
+
+.map-name {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 670px) {
+
+
+}

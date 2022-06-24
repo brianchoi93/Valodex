@@ -1,28 +1,31 @@
-#maplist {
-  list-style-type: none;
-  padding: 0;
-}
-
-.mapimg {
+#maplist>li>img {
   max-width: 50vh;
   max-height: 50vh;
-  padding: 10px 0 20px 0;
 }
 
-.map-name {
-  padding-bottom: 10px;
+.mapname {
+  margin: 20px;
+  padding-top: 10px;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 670px) {
+  
   .map-container {
-  display: grid;
-  grid-template-rows: 350px 350px 350px;
-  grid-template-columns: repeat(3, 1fr);
-}
+    display: grid; 
+    grid-template-rows: 100px 400px 500px;
+    grid-template-columns: 1fr;
+  }
 
-.map-name{
-  font-size: 20px;
-  padding-bottom: 50px;
-}
+  .mapname {
+    font-size: 25px;
+  }
+
+  .mapimage{
+    margin-top: 5%;
+  }
+  .mapicon {
+    margin-top: 5%;
+  }
 
 }
