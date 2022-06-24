@@ -1,5 +1,5 @@
 # Valodex
-[Valodex Screenshot] (https://github.com/brianchoi93/valodex/blob/main/public/Valodex.png?raw=true)
+![Valodex Screenshot] (https://github.com/brianchoi93/valodex/blob/main/public/Valodex.png?raw=true)
 
 ## Description
 Valodex is a website based on one of the most popular first person shooter games currently available called Valorent. This website will allow you to navigate different components of the game, while giving you access to vital information that will better your understanding of the game. 
