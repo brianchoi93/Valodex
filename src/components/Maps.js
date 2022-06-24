@@ -1,3 +1,4 @@
+
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './css/Maps.css'
@@ -28,6 +29,7 @@ function Maps(props) {
         <li className="mapicon"><img src={map.displayIcon} alt="" /></li>
       </ul>
     </div>
+
   );
 }
 
