@@ -1,0 +1,23 @@
+#weaponlist {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.weaponimg {
+  max-width: 25vh;
+  max-height: 25vh;
+  padding: 30px 0 30px 0;
+}
+
+.weap-name {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 670px) {
+  .weapon-container{
+    display: grid;
+    grid-template-rows:repeat (6, 1000px);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

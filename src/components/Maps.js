@@ -1,35 +1,35 @@
-import { useState, useEffect } from "react";
-import './Maps.css';
+
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import './css/Maps.css'
 
 function Maps(props) {
-  
-  const [maps, setMaps] = useState([]);
 
-  useEffect(()=>{
-    fetch('https://valorant-api.com/v1/maps')
-      .then ((res) => res.json())
-      .then((json) => {
-        setMaps(json.data);
-        console.log(json);
-      })
-      .catch((err)=>{
-        console.log("something went wrong")
-      })
-  }, []);
+  const { id } = useParams();
+
+  const [map, setMap] = useState('');
+  useEffect (() => {
+    const url = `https://valorant-api.com/v1/maps/${id}`
+
+    fetch(url)
+    .then ((res) => res.json())
+    .then ((json) => {
+      setMap(json.data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+  }, [id]);
 
   return (
-    <section className="container">
-      {
-        maps.map((map) => {
-          return (
-            <ul id="maplist">
-              <li><img className="mapimg" src={map.splash} alt={map.displayName} /></li>
-              <li>{map.displayName}</li>
-            </ul>
-          )
-        })
-      }
-    </section>
+    <div className="map-container">
+      <ul id="maplist" key={map.uuid}>
+        <li className="mapname">{map.displayName}</li>
+        <li className="mapimage"><img className="mapimg" src={map.splash} alt={map.displayName} /></li>
+        <li className="mapicon"><img src={map.displayIcon} alt="" /></li>
+      </ul>
+    </div>
+
   );
 }
 

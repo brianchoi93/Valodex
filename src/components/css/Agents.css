@@ -1,0 +1,73 @@
+
+.agentlist {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.agentimg {
+  border-top: 2px solid yellow;
+  max-width: 30vh;
+  max-height: 30vh;
+  padding-top: 10%;
+  margin-top: 20%;
+}
+
+.agtdescription {
+  padding-bottom: 30px;
+  margin: 0 20px 0 20px;
+}
+
+.abi-icon {
+  padding: 5px;
+  margin-top: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  max-width: 5vh;
+  max-height: 5vh;
+}
+
+.abi-name {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  font-weight: bold;
+  font-variant-caps: all-small-caps;
+}
+
+.abi-desc {
+  padding-bottom: 20px;
+  margin: 0 20px 0 20px;
+}
+
+@media screen and (min-width: 670px) {
+  .agentlist {
+    display: grid;
+    grid-template-rows: 550px 50px 100px 385px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .agtimg {
+    grid-row: 1;
+    grid-column: 1 / span 4;
+  }
+
+  .agentimg {
+    margin: 5%;
+  }
+  
+  .agentname {
+    grid-row: 2;
+    grid-column: 1 / span 4;
+  }
+
+  .agtdescription {
+    grid-row: 3;
+    grid-column: 1 / span 4;
+    width: 0 30px 0 30px;
+  }
+
+  .abi-container {
+    grid-row: 4;
+  }
+}

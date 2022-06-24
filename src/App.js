@@ -7,11 +7,13 @@ import Sentinel from './components/Sentinel';
 import Controller from './components/Controller';
 import Weapons from './components/Weapons';
 import Maps from './components/Maps';
+import SearchMap from './components/SearchMap';
 import { Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
+
       <header>
         <h1>
           <Link to="/"><img className="title" src="valodex-header.png" alt="Valodex" /></Link>
@@ -23,6 +25,7 @@ function App() {
           <Link to="/maps"><li className="navlist">Maps</li></Link>
         </ul>
       </header>
+
       <main>
         <Routes>
           <Route path="/" element={ <Main /> } />
@@ -32,7 +35,8 @@ function App() {
           <Route path="/agentclass/sentinel" element={ <Sentinel /> } />
           <Route path="/agentclass/controller" element={ <Controller />} />
           <Route path="/weapons" element={ <Weapons /> } />
-          <Route path="/maps" element={ <Maps /> } />
+          <Route path="/maps" element={ <SearchMap /> } />
+          <Route path="/maps/:id" element={ <Maps />} /> 
         </Routes>
       </main>
     </div>
