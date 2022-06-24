@@ -15,7 +15,7 @@ The motivation for building this website simply came from my love for the game. 
 - HTML
 
 ## Installation Instructions
-You can visit Valodex or clone this repo and run `npm install` to install the dependencies.
+You can visit [Valodex](https://valodex.netlify.app/) or clone this repo and run `npm install` to install the dependencies.
 
 ## Resources
 https://www.valorant-api.com
