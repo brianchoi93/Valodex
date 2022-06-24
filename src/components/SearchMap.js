@@ -32,7 +32,6 @@ function SearchMap() {
     event.preventDefault();
     setData(initialData);
     navigate(`/maps/${data.id}`);
-    console.log(data.id);
   }
 
   if(!maps) {

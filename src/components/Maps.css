@@ -1,0 +1,30 @@
+#maplist>li>img {
+  max-width: 50vh;
+  max-height: 50vh;
+}
+
+.mapname {
+  margin: 20px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 670px) {
+  
+  .map-container {
+    display: grid; 
+    grid-template-rows: 100px 400px 500px;
+    grid-template-columns: 1fr;
+  }
+
+  .mapname {
+    font-size: 25px;
+  }
+
+  .mapimage{
+    margin-top: 5%;
+  }
+  .mapicon {
+    margin-top: 5%;
+  }
+}
