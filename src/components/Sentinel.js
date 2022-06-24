@@ -36,11 +36,11 @@ function Sentinel(props) {
                       return;
                       } else {
                       return(
-                        <ul className="abi-container" key={id}>
+                        <div className="abi-container" key={id}>
                           <li className="abi-img"><img className="abi-icon" src={ability.displayIcon} alt="" /></li>
                           <li className="abi-name">{ability.displayName}</li>
                           <li className="abi-desc">{ability.description}</li>
-                        </ul>
+                        </div>
                       )}
                     })
                   }
