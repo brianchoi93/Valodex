@@ -12,7 +12,6 @@
   max-height: 30vh;
   padding-top: 10%;
   margin-top: 20%;
-
 }
 
 .agtdescription {
@@ -71,6 +70,4 @@
   .abi-container {
     grid-row: 4;
   }
-
-
 }

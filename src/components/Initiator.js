@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import "./Agents.css"
+import "./css/Agents.css"
 
 function Initiator(props) {
 

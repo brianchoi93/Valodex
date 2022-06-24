@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import "./Agents.css"
+import "./css/Agents.css"
 
 function Sentinel(props) {
 

@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import './Maps.css'
+import './css/Maps.css'
 
 function Maps(props) {
 

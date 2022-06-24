@@ -4,12 +4,6 @@
   padding: 20px;
 }
 
-/* .class-container {
-  display:grid;
-  grid-template-rows: 400px 400px 400px 400px;
-  grid-template-columns: 1fr;
-} */
-
 .class-desc {
   margin: 0 2em 3em 2em;
 }

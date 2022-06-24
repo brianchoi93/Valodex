@@ -1,7 +1,8 @@
-import "./AgentClass.css"
+import "./css/AgentClass.css"
 import { Link } from 'react-router-dom';
 
 function AgentClass(props) {
+  
   return (
     <div className="class-container">
       <div className="agtclass-div">

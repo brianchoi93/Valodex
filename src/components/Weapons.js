@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import './Weapons.css'
+import './css/Weapons.css'
 
 function Weapons(props) {
   

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import "./Agents.css"
+import "./css/Agents.css"
 
 function Controller(props) {
 
@@ -22,8 +22,8 @@ function Controller(props) {
         agents.map((agent) => {
           if(agent.isPlayableCharacter === true && agent.role.displayName === "Controller") {
             return (
-              <div>
-              <ul key={agent.uuid} className="agentlist">
+              <div key={agent.uuid}>
+              <ul className="agentlist">
                 <li className="agtimg"><img className="agentimg" src={agent.fullPortraitV2} alt={agent.displayName} /></li>
                 <li className="agentname"><h3>{agent.displayName}</h3></li>
                 <li className="agtdescription">{agent.description}</li>

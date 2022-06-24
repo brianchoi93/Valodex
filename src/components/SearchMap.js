@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import "./SearchMap.css"
+import "./css/SearchMap.css"
 
 function SearchMap() {
   let navigate = useNavigate();
